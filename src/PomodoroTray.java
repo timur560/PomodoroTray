@@ -14,7 +14,7 @@ public class PomodoroTray {
 
     public static void main(String[] args) {
         if (!SystemTray.isSupported()) {
-            JOptionPane.showMessageDialog(null, "SystemTray is not supported", "Error", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "SystemTray is not supported", "Error", JOptionPane.ERROR_MESSAGE);
             System.exit(0);
         }
 
@@ -46,6 +46,21 @@ public class PomodoroTray {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     timer.toggle(toggleItem);
+                }
+            });
+
+            prefsItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    timer.showPrefsDialog();
+                }
+            });
+
+            aboutItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JOptionPane.showMessageDialog(null, "Pomodoro technique tray application\nby timur560\n" +
+                            "(c) 2015", "About", JOptionPane.INFORMATION_MESSAGE);
                 }
             });
 

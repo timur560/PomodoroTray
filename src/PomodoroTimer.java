@@ -102,4 +102,32 @@ public class PomodoroTimer {
                 break;
         }
     }
+
+    public void showPrefsDialog() {
+        PrefsDialog dialog = new PrefsDialog(this);
+        dialog.pack();
+        dialog.setTitle("Preferences");
+
+        // center dialog window on screen
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        dialog.setLocation(dim.width / 2 - dialog.getSize().width / 2, dim.height / 2 - dialog.getSize().height / 2);
+
+        dialog.setVisible(true);
+    }
+
+    public int getWorkTime() {
+        return workTime;
+    }
+
+    public int getRestTime() {
+        return restTime;
+    }
+
+    public void setWorkTime(int workTime) {
+        this.workTime = workTime;
+    }
+
+    public void setRestTime(int restTime) {
+        this.restTime = restTime;
+    }
 }
