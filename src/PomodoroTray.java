@@ -1,47 +1,58 @@
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
 /**
- * Created by qwer on 13.01.15.
+ * Pomodoro technique tray application
+ *
+ * @author timur560
  */
 public class PomodoroTray {
 
-    public static final int WORK_TIME = 25;
-    public static final int REST_TIME = 5;
-
     public static void main(String[] args) {
         if (!SystemTray.isSupported()) {
-            System.out.println("SystemTray is not supported");
-            return;
+            JOptionPane.showMessageDialog(null, "SystemTray is not supported", "Error", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
         }
 
         final PopupMenu popup = new PopupMenu();
 
         try {
-            final TrayIcon trayIcon = new TrayIcon(ImageIO.read(PomodoroTray.class.getResource("images/circle_green.png")));
+            final TrayIcon trayIcon = new TrayIcon(ImageIO.read(PomodoroTray.class.getResource("images/circle_yellow.png")));
 
             final SystemTray tray = SystemTray.getSystemTray();
 
-            // Create a pop-up menu components
-            MenuItem aboutItem = new MenuItem("About");
-            MenuItem startStopItem = new MenuItem("Start");
-            MenuItem prefsItem = new MenuItem("About");
-            MenuItem quitItem = new MenuItem("Quit");
+            final PomodoroTimer timer = new PomodoroTimer(trayIcon);
+
+            // Create a pop-up menu items
+            final MenuItem aboutItem = new MenuItem("About");
+            final MenuItem toggleItem = new MenuItem("Start");
+            final MenuItem prefsItem = new MenuItem("Preferences...");
+            final MenuItem quitItem = new MenuItem("Quit");
 
             quitItem.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    System.exit(0);
+                    if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Quit", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                        System.exit(0);
+                    }
                 }
             });
 
-            //Add components to pop-up menu
+            toggleItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    timer.toggle(toggleItem);
+                }
+            });
+
+            //Add items to pop-up menu
             popup.add(aboutItem);
             popup.addSeparator();
-            popup.add(startStopItem);
+            popup.add(toggleItem);
             popup.add(prefsItem);
             popup.addSeparator();
             popup.add(quitItem);
