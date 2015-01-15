@@ -13,10 +13,13 @@ In preferences dialog you can define work and recreation time in minutes. Prefer
 
 ![Pomodoro Tray](http://4.bp.blogspot.com/-G2cU85BHb-E/VLeYeW3QoqI/AAAAAAAAAcU/P5dVo2AugYo/s1600/pom_tray_4.png)
 
+Once the state of pomodoro timer changes (work, recreation, standby), it shows notification in right bottom corner on screen.
 
 ![Pomodoro Tray](http://3.bp.blogspot.com/-YKEarckKQLM/VLeYdnNE1EI/AAAAAAAAAb4/zpz35CU56lg/s1600/pom_tray_1.png)
 
+Also you can watch time left in hint popup when your mouse over the tray icon.
+
 ![Pomodoro Tray](http://3.bp.blogspot.com/-AnLyY-2i00c/VLeYdrrGBLI/AAAAAAAAAb8/qHgVam3FAk8/s1600/pom_tray_3.png)
 
-
+Clone, build and enjoy :).
 
