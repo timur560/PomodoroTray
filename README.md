@@ -5,15 +5,15 @@
 
 1. When you starts application it shows icon in system tray. Initially it colors yellow, because it comes in stand by mode. Red color means you should work, green - have a rest.
 
-![Pomodoro Tray](http://3.bp.blogspot.com/-b2XSn3MMC-k/VLeYegJ_A4I/AAAAAAAAAcE/UAX3eU2PM-c/s1600/pom_tray_5.png)
+ ![Pomodoro Tray](http://3.bp.blogspot.com/-b2XSn3MMC-k/VLeYegJ_A4I/AAAAAAAAAcE/UAX3eU2PM-c/s1600/pom_tray_5.png)
 
 2. There is context popup menu available, which give us ability to start/stop pomodoro timer, open preferences dialog window, or quit the application.
 
-![Pomodoro Tray](http://2.bp.blogspot.com/-8A1usMVTzjI/VLeYdlaeWdI/AAAAAAAAAcA/b7UV0z0MHIA/s1600/pom_tray_2.png)
+ ![Pomodoro Tray](http://2.bp.blogspot.com/-8A1usMVTzjI/VLeYdlaeWdI/AAAAAAAAAcA/b7UV0z0MHIA/s1600/pom_tray_2.png)
 
 3. In preferences dialog you can define work and recreation time in minutes. Preferred by classic pomodoro technuique values are 25 minutes for work and 5 minutes for recreation, but you can change them.
 
-![Pomodoro Tray](http://4.bp.blogspot.com/-G2cU85BHb-E/VLeYeW3QoqI/AAAAAAAAAcU/P5dVo2AugYo/s1600/pom_tray_4.png)
+ ![Pomodoro Tray](http://4.bp.blogspot.com/-G2cU85BHb-E/VLeYeW3QoqI/AAAAAAAAAcU/P5dVo2AugYo/s1600/pom_tray_4.png)
 
 4. Start timer.
 
