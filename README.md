@@ -3,7 +3,7 @@
 
 ## Workflow
 
-1. When you starts application it shows icon in system tray. Initially it colors yellow, because it comes in stand by mode. Red color means you should work, green - have a rest.
+1. When you launch application it puts icon in system tray. Initially it colors yellow, because it comes in standby mode. Red color means you should work, green - have a rest.
 
  ![Pomodoro Tray](http://3.bp.blogspot.com/-b2XSn3MMC-k/VLeYegJ_A4I/AAAAAAAAAcE/UAX3eU2PM-c/s1600/pom_tray_5.png)
 
@@ -19,11 +19,11 @@
 
 ## Features
 
-* Once the state of pomodoro timer changes (work, recreation, standby), it shows notification in right bottom corner on screen.
+* Once the state of pomodoro timer changes (work, recreation, standby), it shows notification in right bottom corner on the screen.
 
  ![Pomodoro Tray](http://3.bp.blogspot.com/-AnLyY-2i00c/VLeYdrrGBLI/AAAAAAAAAb8/qHgVam3FAk8/s1600/pom_tray_3.png)
 
-* Also you can watch time left in hint popup when your mouse over the tray icon.
+* Also you can watch time left in hint popup when your mouse pointer moves over the tray icon.
 
  ![Pomodoro Tray](http://3.bp.blogspot.com/-YKEarckKQLM/VLeYdnNE1EI/AAAAAAAAAb4/zpz35CU56lg/s1600/pom_tray_1.png)
 
