@@ -25,6 +25,7 @@ public class PomodoroTimer {
     private int currentTime;
 
     private Timer timer = new Timer();
+    private PrefsDialog prefsDialog = new PrefsDialog(this);
 
     private TrayIcon trayIcon;
 
@@ -108,15 +109,7 @@ public class PomodoroTimer {
     }
 
     public void showPrefsDialog() {
-        PrefsDialog dialog = new PrefsDialog(this);
-        dialog.pack();
-        dialog.setTitle("Preferences");
-
-        // center dialog window on screen
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        dialog.setLocation(dim.width / 2 - dialog.getSize().width / 2, dim.height / 2 - dialog.getSize().height / 2);
-
-        dialog.setVisible(true);
+        prefsDialog.setVisible(true);
     }
 
     public void showNotification(String text) {

@@ -9,7 +9,6 @@ public class NotificationDialog extends JDialog {
 
     public NotificationDialog() {
         setContentPane(contentPane);
-        setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
         buttonOK.addActionListener(new ActionListener() {
