@@ -53,6 +53,7 @@ public class PomodoroTimer {
                 trayIcon.setImage(rIcon);
                 currentTime = workTime * 60;
                 menuItem.setLabel("Stop");
+                showNotification("Now you should work!");
                 schedule();
                 break;
             case STATE_WORK:
@@ -60,6 +61,7 @@ public class PomodoroTimer {
                 state = STATE_ON_HOLD;
                 trayIcon.setImage(yIcon);
                 menuItem.setLabel("Start");
+                showNotification("Pomodoro stopped...");
                 break;
         }
     }
@@ -86,6 +88,7 @@ public class PomodoroTimer {
                     currentTime = restTime * 60;
                     state = STATE_REST;
                     trayIcon.setImage(gIcon);
+                    showNotification("Time to have a rest!");
                 }
                 trayIcon.setToolTip("Work hard! (" + (currentTime / 60) + ":" + (currentTime % 60) + " left)");
                 schedule();
@@ -96,6 +99,7 @@ public class PomodoroTimer {
                     currentTime = workTime * 60;
                     state = STATE_WORK;
                     trayIcon.setImage(rIcon);
+                    showNotification("Now you should work!");
                 }
                 trayIcon.setToolTip("Party time! (" + (currentTime / 60) + ":" + (currentTime % 60) + " left)");
                 schedule();
@@ -113,6 +117,12 @@ public class PomodoroTimer {
         dialog.setLocation(dim.width / 2 - dialog.getSize().width / 2, dim.height / 2 - dialog.getSize().height / 2);
 
         dialog.setVisible(true);
+    }
+
+    public void showNotification(String text) {
+        NotificationDialog notificationDialog = new NotificationDialog();
+        notificationDialog.setNotificationText(text);
+        notificationDialog.setVisible(true);
     }
 
     public int getWorkTime() {
